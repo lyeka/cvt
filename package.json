@@ -1,0 +1,25 @@
+{
+  "name": "ai-mindmap-chrome-extension",
+  "version": "1.0.0",
+  "description": "使用AI技术智能分析网页内容，生成主题总结和思维导图的Chrome插件",
+  "scripts": {
+    "build": "echo '请使用Chrome开发者模式加载已解压的扩展程序'",
+    "test": "echo '暂无测试脚本'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "ai",
+    "mindmap",
+    "summary"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "prettier": "^3.5.0"
+  },
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  }
+}
