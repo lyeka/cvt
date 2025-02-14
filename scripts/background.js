@@ -19,6 +19,18 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
 });
 
+// 监听扩展图标点击事件
+chrome.action.onClicked.addListener(async (tab) => {
+    // 切换侧边栏
+    await chrome.sidePanel.open({ windowId: tab.windowId });
+    // 设置侧边栏标题
+    await chrome.sidePanel.setOptions({ 
+        tabId: tab.id,
+        path: 'sidepanel/sidepanel.html',
+        enabled: true
+    });
+});
+
 // 缓存配置
 const CACHE_CONFIG = {
     MAX_AGE_MS: 24 * 60 * 60 * 1000, // 缓存24小时
